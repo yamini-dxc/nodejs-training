@@ -5,42 +5,42 @@
 const fs = require('fs');
 const path = require('path');
 
-// fs.copyFile('text1.txt', 'text2.txt', (err) => {
-//     if (err) {
-//         console.log("Failed to create copy of text1.txt")
-//     } else {
-//         console.log('Successfully created copy of text1.txt');
-//     }
-// });
+fs.copyFile('text1.txt', 'text2.txt', (err) => {
+    if (err) {
+        console.log("Failed to create copy of text1.txt")
+    } else {
+        console.log('Successfully created copy of text1.txt');
+    }
+});
 
 /*
 2. Clone a directory and its child files
 cloneDirectory(path to a directory); return me the cloned directory name
 */
 
-// function cloneDirectory(sourceDirectory) {
-//     var destDirectory = sourceDirectory + '_Copy';
-//     fs.mkdir(path.join(destDirectory), (err) => {
-//         if (err) {
-//             console.log("Error in creating the dir" + err);
-//         } else {
-//             console.log("Directory created successfully");            
-//             fs.cp(sourceDirectory, destDirectory, { recursive: true }, (err) => {
-//                 if (err) {
-//                     console.log("Error while cloning the directory " + err);
-//                 } else {
-//                     console.log("Directory cloned successfully");
-//                     return destDirectory;
-//                 }
-//             });
-//         }
-//     })
-//     // 
+function cloneDirectory(sourceDirectory) {
+    var destDirectory = sourceDirectory + '_Copy';
+    fs.mkdir(path.join(destDirectory), (err) => {
+        if (err) {
+            console.log("Error in creating the dir" + err);
+        } else {
+            console.log("Directory created successfully");            
+            fs.cp(sourceDirectory, destDirectory, { recursive: true }, (err) => {
+                if (err) {
+                    console.log("Error while cloning the directory " + err);
+                } else {
+                    console.log("Directory cloned successfully");
+                    return destDirectory;
+                }
+            });
+        }
+    })
+    // 
     
-// }
+}
 
-// var newDirectory = cloneDirectory("./masterFolder");
-// console.log(newDirectory);
+var newDirectory = cloneDirectory("./masterFolder");
+console.log(newDirectory);
 
 
 /*
