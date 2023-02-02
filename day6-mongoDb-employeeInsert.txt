@@ -1,0 +1,12 @@
+use dxcDb
+db.employees.insertOne({_id:1,empId:101,empName:"Sara"})
+db.employees.insertOne({_id:2,empId:102,empName:"Tara"})
+db.employees.insertOne({_id:3,empId:103,empName:"Meera"})
+db.employees.insertOne({_id:4,empId:104,empName:"Prabha"})
+db.employees.insertOne({_id:5,empId:105,empName:"Shuba"})
+db.employees.insertOne({_id:6,empId:106,empName:"Sandhya"})
+db.employees.insertOne({_id:7,empId:107,empName:"Ramya"})
+db.employees.insertOne({_id:8,empId:108,empName:"Roopa"})
+db.employees.insertOne({_id:9,empId:109,empName:"Rekha"})
+db.employees.insertOne({_id:10,empId:110,empName:"Jaya"})
+
